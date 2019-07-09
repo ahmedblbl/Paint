@@ -21,7 +21,7 @@ public class Circle extends BaseShape{
 		CheckPoint x = new CheckPoint();
 		int r = (int) x.dist(new Point(x1, y1), new Point(x2, y2));
 		r *= 2;
-		Map<String, Double> properties = getProperties();
+		Map<String, Double> properties = getProperties(); 
 	    properties.put("center_x", (double) x1);
 		properties.put("center_y", (double) y1);
 		setProperties(properties);
