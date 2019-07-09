@@ -37,7 +37,7 @@ public class Circle extends BaseShape{
 		properties.put("radius", (double) r/2);
 		properties.put("end_x", (double) (x1 + r));
 		properties.put("end_y", (double) (y1 + r/2));
-		
+		setProperties(properties);
 	    
 	}
 	@Override

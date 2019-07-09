@@ -229,7 +229,6 @@ public class mypanel extends JPanel{
 						Point three = new Point((int) Math.round(s[i].getProperties().get("three_x")),
 								(int) Math.round(s[i].getProperties().get("three_y")));
 						if(check.isInside(one, two, three, e.getPoint())){
-							System.out.println("true triangle " + i);
 							oldshape = s[i];
 							try {
 								shape = (Shape) s[i].clone();
@@ -344,7 +343,6 @@ public class mypanel extends JPanel{
 									, (int)Math.round((properties.get("end_y"))), 10, 10);
 						}
 						else {
-							System.out.println("hiiiiiiiiiiiii");
 							int shift_x = (e.getX() - resize_x);
 							int shift_y = (e.getY() - resize_y);
 							Map<String, Double> properties = shape.getProperties();
@@ -508,7 +506,6 @@ public class mypanel extends JPanel{
 		    if (!entry.isDirectory() && entry.getName().endsWith(".class")) {
 		        String className = entry.getName().replace('/', '.'); // including ".class"
 		        classNames.add(className.substring(0, className.length() - ".class".length()));
-		        System.out.println(className.substring(0, className.length() - ".class".length()));
 		        classname = className.substring(0, className.length() - ".class".length());
 		        if (classname.length() > 5) {
 		        	factory.name = classname;
@@ -522,11 +519,6 @@ public class mypanel extends JPanel{
         factory.cl = instance;
 	    instance.setColor(Color.BLACK);
 	    instance.setFillColor(Color.WHITE);
-	    
-		Map <String , Double> temp = instance.getProperties();
-		for (Map.Entry<String, Double> entrys : temp.entrySet()) {
-			System.out.println(entrys.getKey() + " " + entrys.getValue());
-		}
 	}
 	
 	public void drawSup() throws CloneNotSupportedException {
